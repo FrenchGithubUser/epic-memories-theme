@@ -1,8 +1,8 @@
 # Epic Memories
 
-![epic-memories Pegasus theme](assets/screenshots/1.jpg)
-![epic-memories Pegasus theme](assets/screenshots/2.jpg)
-![epic-memories Pegasus theme](assets/screenshots/3.jpg)
+![epic-memories Pegasus theme](.meta/screenshots/1.jpg)
+![epic-memories Pegasus theme](.meta/screenshots/2.jpg)
+![epic-memories Pegasus theme](.meta/screenshots/3.jpg)
 
 
 In order for the theme to work properly, collections must be named in the same way as emulationstation collections (ex: Nintendo DS -> nds, Nintendo GameCube -> gc etc.)
