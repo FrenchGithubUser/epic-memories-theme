@@ -7,6 +7,8 @@
 
 In order for the theme to work properly, collections must be named in the same way as emulationstation collections (ex: Nintendo DS -> nds, Nintendo GameCube -> gc etc.)
 
+As video assets seem to be too large for github, they are available separately [here](https://mega.nz/folder/VW5HzagD#mMOkLeamV6S0UqXFPmxtcQ) (they are optionnal and the theme works without them).
+
 ### Dependencies
 
 
