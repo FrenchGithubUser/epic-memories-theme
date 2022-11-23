@@ -18,6 +18,14 @@ FocusScope {
                 visible: opacity
             }
 
+            LaunchingConsole{
+                id: launchingConsole
+
+                focus: (root.state === 'launching_console')
+                opacity: focus
+                visible: opacity
+            }
+
             HorizontalList{
                 id: gameList
 
@@ -26,6 +34,7 @@ FocusScope {
                 visible: opacity
             }
 
+            // todo: move sounds to components
             onStateChanged:{
                 if (state === 'consoles')
                 {
@@ -47,7 +56,7 @@ FocusScope {
             }
             SoundEffect{
                 id:nextGameSfx
-                source: "assets/sounds/effects/next/" + currentCollection.shortName + ".wav"
+                source: "assets/sounds/effects/next/" + currentCollection.shortName + ".wav" ?? ""
             }
             SoundEffect{
                 id: nextConsoleSfx

@@ -3,15 +3,13 @@ import QtMultimedia 5.15
 import QtGraphicalEffects 1.15
 
 FocusScope {
-    id: horizontalList
+    id: consolesList
     property var currentConsole: api.collections.get(currentCollectionIndex)
     property int listShadowHeight: 150
         property string state: root.state
             property bool playing
 
-            width: parent.width
-            anchors.top: parent.top
-            anchors.bottom: parent.bottom
+            anchors.fill: parent
 
             Item {
                 id: background
@@ -238,7 +236,7 @@ FocusScope {
                             Keys.onPressed:{
                                 if (api.keys.isAccept(event))
                                 {
-                                    root.state = 'games'
+                                    root.state = 'launching_console'
                                     event.accepted = true;
                                 }
                             }

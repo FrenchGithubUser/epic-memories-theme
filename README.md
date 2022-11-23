@@ -7,7 +7,7 @@
 
 In order for the theme to work properly, collections must be named in the same way as emulationstation collections (ex: Nintendo DS -> nds, Nintendo GameCube -> gc etc.)
 
-As video assets seem to be too large for github, they are available separately [here](https://mega.nz/folder/VW5HzagD#mMOkLeamV6S0UqXFPmxtcQ) (they are optionnal and the theme works without them).
+As video assets seem to be too large for github, they are available separately [here](https://mega.nz/folder/VW5HzagD#mMOkLeamV6S0UqXFPmxtcQ), they must be extracted into the assets folder (they are optionnal and the theme works without them).
 
 ### Dependencies
 
@@ -34,7 +34,7 @@ Feel free to open an issue if you notice something wrong, PRs are also welcome !
 
 - [x] Improve list animations (similar to prosperoOS)
 
-- [ ] Add console startup video when selecting a console
+- [x] Add console startup video when selecting a console
 
 - [ ] Upscale pictures so they look better on big screeens
 
