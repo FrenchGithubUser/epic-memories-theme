@@ -267,8 +267,9 @@ FocusScope {
                         Keys.onPressed: {
                             if (api.keys.isAccept(event))
                             {
-                                currentGame.launch()
                                 event.accepted = true;
+                                currentGame.launch()
+
                             }
                             if (api.keys.isCancel(event))
                             {

@@ -8,7 +8,7 @@ FocusScope {
         onStateChanged:{
             if (state === 'launching_console')
             {
-                consoleStartupVideo.source === "" ? root.state = "games" : consoleStartupVideo.play()
+                consoleStartupVideo.status === MediaPlayer.InvalidMedia ? root.state = "games" : consoleStartupVideo.play()
             }
         }
 

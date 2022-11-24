@@ -120,6 +120,7 @@ FocusScope {
                     Component {
                         id: videoPreviewWrapper
 
+                        //todo: only load video size corresponding to screen size
                         Video {
                             id: videocomponent
 
@@ -247,19 +248,19 @@ FocusScope {
                             id: consoleViewDelegate
 
                             Image {
-                                id: gameCover
+                                id: consoleController
 
-                                height: ListView.isCurrentItem ? vpx(300) : vpx(70)
-                                width: ListView.isCurrentItem ? vpx(200) : vpx(100)
+                                // height: ListView.isCurrentItem ? vpx(300) : vpx(70)
+                                width: ListView.isCurrentItem ? vpx(250) : vpx(70)
 
                                 fillMode: Image.PreserveAspectFit
                                 source: "../assets/images/controllers/" + modelData.shortName + ".png"
                                 asynchronous: true
 
                                 anchors.bottom: parent.bottom
-                                anchors.leftMargin: -50
                                 Behavior on height { NumberAnimation { duration: 100 } }
                             }
+
 
                         }
 
