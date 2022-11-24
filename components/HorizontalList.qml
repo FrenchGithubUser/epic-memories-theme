@@ -113,10 +113,9 @@ FocusScope {
                     videoDelay.restart();
                 }
 
-                // onPlayingChanged: {
-                //     videoPreviewLoader.sourceComponent = undefined;
-                //     videoDelay.restart();
-                // }
+                onPlayingChanged: {
+                    playing ? ambiantMusic.pause() : ambiantMusic.play()
+                }
 
                 onStateChanged: {
                     videoPreviewLoader.sourceComponent = undefined;
@@ -301,6 +300,13 @@ FocusScope {
 
                     }
 
+                    //sounds
+                    Audio {
+                        id: ambiantMusic
+                        source: (state === 'games') ? "../assets/sounds/ambiant/" + currentCollection.shortName + ".wav" : ""
+                        autoPlay: true
+                        loops: Audio.Infinite
+                    }
 
                 }
 

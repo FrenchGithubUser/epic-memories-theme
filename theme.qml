@@ -48,12 +48,6 @@ FocusScope {
 
 
             // sounds
-            Audio {
-                id: ambiantMusic
-                source: (state === "games" && "assets/sounds/ambiant/" + currentCollection.shortName + ".wav") ? "assets/sounds/ambiant/" + currentCollection.shortName + ".wav" : ""
-                autoPlay: true
-                loops: Audio.Infinite
-            }
             SoundEffect{
                 id:nextGameSfx
                 source: "assets/sounds/effects/next/" + currentCollection.shortName + ".wav" ?? ""
