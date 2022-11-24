@@ -258,7 +258,7 @@ FocusScope {
                                 asynchronous: true
 
                                 anchors.bottom: parent.bottom
-                                Behavior on height { NumberAnimation { duration: 100 } }
+                                Behavior on width { NumberAnimation { duration: 150 } }
                             }
 
 
