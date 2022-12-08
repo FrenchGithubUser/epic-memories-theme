@@ -250,15 +250,15 @@ FocusScope {
                             Image {
                                 id: consoleController
 
-                                // height: ListView.isCurrentItem ? vpx(300) : vpx(70)
-                                width: ListView.isCurrentItem ? vpx(250) : vpx(70)
+                                width: ListView.isCurrentItem ? vpx(230) : vpx(100)
+                                height: ListView.isCurrentItem ? vpx(200) : vpx(70)
 
                                 fillMode: Image.PreserveAspectFit
                                 source: "../assets/images/controllers/" + modelData.shortName + ".png"
                                 asynchronous: true
 
                                 anchors.bottom: parent.bottom
-                                Behavior on width { NumberAnimation { duration: 150 } }
+                                Behavior on height { NumberAnimation { duration: 150 } }
                             }
 
 

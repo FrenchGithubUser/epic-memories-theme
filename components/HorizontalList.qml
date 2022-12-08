@@ -126,7 +126,7 @@ FocusScope {
                 Timer {
                     id: videoDelay
 
-                    interval: 1500
+                    interval: 2000
                     onTriggered: {
                         if (currentGame && currentGame.assets.videos.length && state === 'games')
                         {
@@ -191,7 +191,9 @@ FocusScope {
                 Image {
                     id: gameLogo
 
-                    width: vpx(250)
+                    width: playing ? vpx(100) : vpx(250)
+
+                    Behavior on width { NumberAnimation { duration: 150 } }
                     fillMode: Image.PreserveAspectFit
                     source: currentGame.assets.logo
                     asynchronous: true
@@ -207,7 +209,7 @@ FocusScope {
                     model: currentCollection.games
                     delegate: gameViewDelegate
 
-                    highlightMoveDuration : 100
+                    highlightMoveDuration : 250
 
                     orientation: ListView.Horizontal
                     anchors.bottom: parent.bottom
@@ -215,6 +217,7 @@ FocusScope {
                     anchors.right: parent.right
                     anchors.margins: vpx(10)
                     height: vpx(200)
+                    spacing: vpx(20)
                     keyNavigationWraps: true
 
                     // highlightRangeMode: ListView.ApplyRange
@@ -287,26 +290,33 @@ FocusScope {
                         Image {
                             id: gameCover
 
-                            width: ListView.isCurrentItem ? vpx(330) : vpx(100)
-                            height: ListView.isCurrentItem ? vpx(300) : vpx(70)
+                            // width: ListView.isCurrentItem ? vpx(330): vpx(100)
+                            height: ListView.isCurrentItem ? (playing ? vpx(180) :vpx(300)) : vpx(70)
 
                             fillMode: Image.PreserveAspectFit
                             source: modelData.assets.boxFront
                             asynchronous: true
 
                             anchors.bottom: parent.bottom
-                            Behavior on height { NumberAnimation { duration: 100 } }
+                            anchors.bottomMargin: playing && !ListView.isCurrentItem ? vpx(-100) : 0
+                            Behavior on height { NumberAnimation { duration: 150 } }
+                            Behavior on anchors.bottomMargin {
+                            NumberAnimation {
+                                duration: 150
+                                easing.type: Easing.OutCubic
+                            }
                         }
-
-                    }
-
-                    //sounds
-                    Audio {
-                        id: ambiantMusic
-                        source: (state === 'games') ? "../assets/sounds/ambiant/" + currentCollection.shortName + ".wav" : ""
-                        autoPlay: true
-                        loops: Audio.Infinite
                     }
 
                 }
+
+                //sounds
+                Audio {
+                    id: ambiantMusic
+                    source: (state === 'games') ? "../assets/sounds/ambiant/" + currentCollection.shortName + ".wav" : ""
+                    autoPlay: true
+                    loops: Audio.Infinite
+                }
+
+            }
 
