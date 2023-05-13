@@ -1,6 +1,6 @@
 # Epic Memories
 
-[Video preview](https://www.youtube.com/watch?v=z2IfOOKts08)
+[![Video preview](.meta/screenshots/0.jpg)](https://www.youtube.com/watch?v=z2IfOOKts08)
 
 ![epic-memories Pegasus theme](.meta/screenshots/1.jpg)
 ![epic-memories Pegasus theme](.meta/screenshots/2.jpg)
